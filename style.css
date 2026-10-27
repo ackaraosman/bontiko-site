@@ -1,0 +1,33 @@
+:root{
+  --ink:#1b2a3a;--muted:#5b6b7c;--paper:#fbf8f2;--card:#ffffff;--accent:#1f3a5f;--sun:#f2b84b;--line:#e6e0d4;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:ui-rounded,"SF Pro Rounded","Nunito","Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding-top:28px;padding-bottom:28px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.35rem;letter-spacing:-.01em;color:var(--accent);text-decoration:none}
+.brand svg{width:30px;height:30px;fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;color:var(--accent);background:#eef2f7;border:1px solid #d9e1ec;border-radius:999px;padding:6px 12px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 4px rgba(242,184,75,.25)}
+.hero{padding:40px 0 48px}
+.eyebrow{margin:0 0 14px;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{margin:0 0 20px;font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.08;letter-spacing:-.02em;font-weight:800}
+h1 em{font-style:normal;color:var(--accent);border-bottom:6px solid var(--sun);line-height:1}
+.lead{font-size:1.15rem;max-width:620px;margin:0 0 28px;color:#2d3d4f}
+.hero-note{display:flex;flex-direction:column;gap:10px;max-width:520px}
+.chat{display:inline-block;padding:12px 16px;border-radius:18px;font-size:1rem;max-width:85%}
+.chat.kid{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:6px}
+.chat.bot{align-self:flex-end;background:var(--accent);color:#fff;border-bottom-right-radius:6px}
+section{padding:36px 0;border-top:1px solid var(--line)}
+h2{margin:0 0 18px;font-size:1.45rem;letter-spacing:-.01em}
+.steps ol{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:14px}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 58px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--sun);color:var(--ink);font-weight:800;display:grid;place-items:center;font-size:.95rem}
+.steps strong{display:block;margin-bottom:2px}
+.why p{max-width:680px;margin:0 0 14px;color:#2d3d4f}
+.soon{text-align:left}
+.soon p{margin:0;color:#2d3d4f}
+footer{padding:28px 24px 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+footer a{color:var(--accent)}
+@media (max-width:600px){.nav{padding-top:20px}.pill{font-size:.78rem}.hero{padding:24px 0 36px}.lead{font-size:1.05rem}}
